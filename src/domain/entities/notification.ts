@@ -21,6 +21,8 @@ export class Notification extends Entity {
   constructor(input: NotificationProps) {
     super(input.id);
 
+    this.createdAt = input.createdAt ?? new Date();
+
     Object.assign(this, input);
   }
 
