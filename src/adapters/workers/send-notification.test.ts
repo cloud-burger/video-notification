@@ -30,6 +30,7 @@ describe('Adapters - Workers - Send notification', () => {
 
     expect(sendNotificationUseCase.execute).toHaveBeenNthCalledWith(1, {
       id: expect.any(String),
+      createdAt: expect.any(Date),
       metadata: {
         content: 'O processamento do vídeo foi concluído.',
         title: 'Retorno de solicitação de processamento de vídeo',
